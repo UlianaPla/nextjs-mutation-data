@@ -1,3 +1,4 @@
+import { togglePostLikeStatus } from '@/actions/posts';
 import { formatDate } from '@/lib/format';
 import LikeButton from './like-icon';
 
@@ -19,7 +20,7 @@ function Post({ post }) {
             </p>
           </div>
           <div>
-            <LikeButton />
+            <LikeButton action={togglePostLikeStatus}/>
           </div>
         </header>
         <p>{post.content}</p>
